@@ -5,7 +5,7 @@
 # / = division
 # = exponente
 
-#01-DATOS DE TIPO NÚMERICO
+#1 DATOS DE TIPO NÚMERICO
 edad = 29
 estatura = 1.71
 peso = 70.5
@@ -28,7 +28,7 @@ print(
 )
 
 
-# 02- DATOS DE TIPO CADENA DE CARACTERES
+#2 DATOS DE TIPO CADENA DE CARACTERES
 asignatura = "programacion"
 carrera = "Ingenieria Civil en Informatica"
 print("#### 02-strings ####")
@@ -39,7 +39,7 @@ print("la cantidad de caracteres de la palabra", asignatura, "es de:", len(asign
 print("la cantidad de caracteres de la palabra", carrera, "es de:", len(carrera))
 
 
-# 03-VALORES DE VERDADERO Y FALSO
+#3 VALORES DE VERDADERO Y FALSO
 ampolleta = False
 interruptor = True
 
@@ -59,7 +59,7 @@ print(bool(1))
 print("\n")
 
 
-# 04-DATOS DE TIPO LIST (objetos de tipo colección) - (mutable)
+#4 DATOS DE TIPO LIST (objetos de tipo colección) - (mutable)
 print("##### 04 - LISTA #####")
 
 #Inicializando lista de 2 maneras
@@ -91,10 +91,10 @@ print(num.count(5000))  # cantidad de ocurrencias de un elemtento en especifico
 lenguaje = ["javascript"]
 print("Nuevo valor del arreglode un elemento:", lenguaje)
 
-# ¿como accedo a un alemento especifico de la lista?
+#¿Como accedo a un alemento especifico de la lista?
 print(estudiantes[0])  # correcto (1° elemento de la lista)
 print(estudiantes[1])  # (2° elemento de la lista)
-# print(estudiantes[5]) #incorrecto
+#Print(estudiantes[5]) #incorrecto
 print("posicion -2", estudiantes[-2])
 
 #Reasignando el valor de la 3° posicion de la lista
@@ -116,7 +116,7 @@ print(list("python"))
 print(list(range(1, 5)))
 print("\n")
 
-#Tuplas (no mutables)
+#5 TUPLAS (No mutables)
 newtupla = tuple()
 grupo1 = ("daniel", "cristian", "felipe", "200", "100", "daniel")
 print("#### 05-tuplas ####")
@@ -125,36 +125,36 @@ print(tuple(grupo1))
 #Accediendo al primer elemento de la tupla
 print(grupo1(0))
 
-#consultando el elemento "daniel" cuantas veces se encuentra en el tupla
+#Consultando el elemento "daniel" cuantas veces se encuentra en el tupla
 print("El elemento que se repite:", grupo1.count("daniel"))
 
-# Muestra el indice del primer elemento buscando
+#Muestra el indice del primer elemento buscando
 print("Indice del elemento:", grupo1.index("daniel"))
 
-# Caracteristicas de los Tuplas
+#Caracteristicas de los Tuplas
 # 1:ORDENADA (Los elementos dentro de ella están indexados y se accede a ellos a través de una posición)
 # 2:INMUTABLES DINAMICA EFICIENTES (Significa que una vez creada una tupla no se puede modificar, es decir no se puede agregar ni eliminar elementos)
 # 3:DINAMICA EFICIENTES (Significa que una vez creada una tupla no se puede modificar, es decir no se puede agregar ni eliminar elementos Puede contener diferentes tipos de datos. Es decir, soportar elementos como números, strings, listas, diccionarios y otras tuplas)
 # 4:EFICIENTES (Son más eficientes en términos de espacio y tiempo que las listas cuando se trata de operaciones que no implican modificaciones)
 
-# Reasignando el primer elemento de la tupla
+#Reasignando el primer elemento de la tupla
 grupo1[0] = "Constanza"
 print(grupo1)
 
-# ¿Se puede sumas las tuplas?
+#¿Se puede sumas las tuplas?
 print("Suma de listas:",estudiantes + num)
 
-# Obteniendo un trozo de la tupla
+#Obteniendo un trozo de la tupla
 grupo2 = ("Pedro", "100", "Felipe", "Diego", "2020", "Alejandra")
 print("trozo de la tupla", grupo2[3:0])
 
-# ¿Entonces como no puedo modificar una tupla, que puedo hacer?
+#¿Entonces como no puedo modificar una tupla, que puedo hacer?
 grupo1 = list(grupo1)
 print("La tupla ahora es de tipo", type(grupo1), "\n")
 print("\n")
 
-# Sets (Conjuntos) - Estructura fija
-# Formas de inicializar un set
+#6 SETS (Conjuntos) - Estructura fija
+#Formas de inicializar un set
 print("#### Sets ####")
 Conjunto_vacio = set()
 Conjunto_vacio1 = {}  # Diccionario o set?
@@ -170,7 +170,7 @@ print("El set de colores lo conforman:", conjunto_colores)
 print("El set de animales lo conforman:",conjunto_animales,"\n") #un set no acepta duplicados, a diferencia de las listas que si.
 
 
-#07 - DICCIONARIOS (Clave-Valor)
+#7 DICCIONARIO (Clave-Valor)
 print("06-DICCIONARIOS")
 
 diccionario1 = dict()
