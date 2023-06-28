@@ -1,4 +1,4 @@
-#01-DECLARANDO LA PRIMERA FUNCIÓN
+#1 DECLARANDO LA PRIMERA FUNCIÓN
 print("DECLARANDO UNA FUNCIÓN SIMPLE")
 
 def La_primera_funcion():
@@ -7,7 +7,7 @@ def La_primera_funcion():
 La_primera_funcion()
 
 
-#02-DECLARANDO UNA FUNCIÓN Y UTILIZANDO LISTAS
+#2 DECLARANDO UNA FUNCIÓN Y UTILIZANDO LISTAS
 print("\nDECLARANDO UNA FUNCIÓN Y UTILIZANDO LISTAS")
 
 def concatenar(lista1,lista2):
@@ -20,7 +20,7 @@ lista2 = [4,5,6]
 print(concatenar(lista1,lista2))
 
 
-#03-DECLARANDO UNA FUNCIÓN MULTIPLICACION PASANDO PARAMETROS
+#3 DECLARANDO UNA FUNCIÓN MULTIPLICACION PASANDO PARAMETROS
 print("\nDECLARANDO UNA FUNCIÓN MULTIPLICACION PASANDO PARAMETROS")
 
 def multiplicacion(num1,num2):
@@ -30,7 +30,7 @@ def multiplicacion(num1,num2):
 print(multiplicacion(50,50))
 
 
-#04-EJEMPLO DE UNA FUNCIÓN
+#4 EJEMPLO DE UNA FUNCIÓN
 print("\nFUNCIONES SUMA Y RESTA (POR TECLADO)")
 
 def suma(a, b):
@@ -51,7 +51,7 @@ resultado2 = resta(a, b)
 print("La resta es de:", resultado2)
 
 
-#05-PASANDO PARAMETROS POR VALOR
+#5 PASANDO PARAMETROS POR VALOR
 print("\n05-PASANDO PARÁMETROS POR VALOR")
 def modificar_numero(x):
     x = 10  
@@ -62,7 +62,7 @@ modificar_numero(x)
 print("Después de llamar a la función:", x)  
 
 
-#06-PASANDO PARAMETROS POR REFERENCIA
+#6 PASANDO PARAMETROS POR REFERENCIA
 print("\n06-PASANDO PARÁMETROS POR REFERENCIA")
 
 #Paso por referencia (objetos mutables)
