@@ -1,5 +1,3 @@
-# Operadores
-
 # Operaciones Aritmeticas
 # Operador Nombre Ejemplo
 # +        Suma   a + b = 8
@@ -43,72 +41,40 @@
 # False      True
 # True       False
 
-# ejemplo
+#Ejemplo
 bencina = True
-encendido = True
+encendido = False
 edad = 19
 
-# And
+#Utilizando el operador AND
 if bencina and encendido:
     print("El vehiculo puede avanzar")
-
-else:
-    print("El vehiculo no puede avanzar")
-
-# Or
-if bencina or encendido:
-    print("El vehiculo puede avanzar")
-
-else:
-    print("El vehiculo no puede avanzar")
-
-    # Not
-    # if bencina not encendido: #Invierte el valor de  bencina
-    print("El vehiculo puede avanzar")
-
-    # else:
-    print("El vehiculo no puede avanzar")
-
-# Not con And
-if not bencina and encendido:
-    print("El vehiculo puede avanzar, Utilizando Not y And")
-
-else:
-    print("El vehiculo no puede avanzar")
-
-# Not con Or
-if not bencina or encendido:
-    print("El vehiculo puede avanzar, Utilizando Not y Or")
-
-else:
-    print("El vehiculo no puede avanzar")
-
-# Not con And y Or
-if not bencina or (encendido and edad > 18):
-    print("El vehiculo puede avanzar")
-
 else:
     print("El vehiculo no puede arrancar")
 
-# Condicinales
-
-# Sentencia If
-# if condicion: ejecutar un código
-
-x = 15
-if x > 10:
-    print("x es mayor que 10")  # x es mayor que 10
-
-# Sentencia else
-# if condicion: ejecutar un código
-# else: ejecutar un código distinto
-
-x1 = 5
-if x1 > 10:
-    print("x es mayor que 10")
-
+#Utilizando el operador OR
+if bencina or encendido:
+    print("El vehiculo puede avanzar")
 else:
-    print("x es menor o igual que 10")  # x1 es menor o igual que 10
+    print("El vehiculo no puede arrancar")
+
+#Utilizando el operador NOT junto al AND
+if not bencina and encendido:
+    print("El vehiculo puede avanzar")
+else:
+    print("El vehiculo no puede arrancar")
+
+#Utilizando el operador NOT junto al OR
+if not bencina or encendido:
+    print("Utilizando NOT Y OR:  El vehiculo puede avanzar")
+else:
+    print("El vehiculo no puede arrancar")
+
+#Utilizando el operador NOT junto al AND y OR
+if not bencina or (encendido and edad >= 18):
+    print("El vehiculo puede avanzar")
+else:
+    print("El vehiculo no puede arrancar")
 
 # Sentencia Elif
 # if condicion: ejecutar un código
@@ -122,3 +88,5 @@ elif x < 10:
     print("x2 es menor que 10")
 else:
     print("x2 es 10")  # x2 es menor que 10
+
+
