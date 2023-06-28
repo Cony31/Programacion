@@ -1,72 +1,108 @@
-# While
-contador = 0
+from colorama import init, Fore
+init(autoreset=True)
 
-while contador < 5:
-    print("El contador es:", contador)
-    contador += 1
+#01-WHILE
+edad = 15
+num = 0
 
-print("Fin del bucle while")
+#Bucle infito
+"""while edad < 18:
+    print("Eres menor de edad, no puedes manejar")"""
 
-# En este ejemplo, inicializamos la variable contador con el valor 0.
-# Luego, establecemos la condición del bucle while utilizando la expresión contador < 5.
-# Esto significa que el bucle se ejecutará siempre que la variable contador sea menor que 5
-# Después de imprimir el valor del contador, incrementamos su valor en 1 usando el operador +=.
-# El bucle while continuará ejecutándose mientras se cumpla la condición contador < 5.
-# Una vez que la condición se vuelva falsa (es decir, el contador sea igual o mayor a 5),
-# el bucle while se detendrá y el programa imprimirá "Fin del bucle while".
+#Bucle infinito
+"""while True:
+    print(num)
+    num +=2"""
 
-print()
-# For
-for i in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10):
+#¿Qué hace este bucle?
+print(Fore.GREEN + "01 - WHILE")
+print(Fore.YELLOW +'\nImpresión de numeros de 0 al 100 (Incrementando de 2 en 2)')
+
+num = 0
+while num <= 100:
+    print(num)
+    num += 2
+    #num = num + 2
+print(Fore.RED + "Primer Bucle terminado!\n")
+
+#Combinando While y else
+print(Fore.YELLOW +'\nImpresión de numeros de 100 al 200 (Incrementando de 2 en 2) + Condicion ELSE')
+
+while num <= 200:
+    print(num)
+    num += 2
+else: 
+    print("Mi condicion es igual o mayor a 200")
+print(Fore.RED + "Segundo Bucle terminado!")
+
+
+#Combinando While y if
+print(Fore.YELLOW +'\nImpresión de numeros de 200 al 300 (Incrementando de 2 en 2) + IF en 250')
+
+while num <= 300:
+    print(num)
+    num += 2
+    if num == 250:  #Mover if izquierda
+        print("Mi condicion es igual a 250")
+print(Fore.RED + "Tercer Bucle terminado!\n")
+
+#Utilizando el break
+print(Fore.YELLOW +'\nImpresión de numeros de 300 al 400 (Incrementando de 2 en 2) + Break a los 350')
+
+while num <= 400:
+    print(num)
+    num += 2
+    if num == 350:  #mover if izquierda
+        print(Fore.MAGENTA + "Se detiene la ejecución")
+        break
+print(num)
+print(Fore.RED + "Cuarto Bucle terminado!\n")
+
+
+#Utilizando el continue
+print(Fore.YELLOW +'\nImpresión de numeros de 0 al 50 (Incrementando de 1 en 1) + continue if == 40')
+num = 0
+while num <= 50:
+    num += 1
+    if num == 40:
+        continue
+    print(num)
+
+#Loop Infinito + Break
+"""while True:
+    parametro = input(">")
+    if parametro == "exit":
+        break
+    else:
+        print(parametro)"""
+
+#Bucle For
+print(Fore.GREEN + "02 - FOR")
+
+
+print(Fore.YELLOW +'\nImpresión de una lista de 10 elementos de forma vertical (Utilizando FOR)')
+print(Fore.YELLOW +'\nFOR N°1')
+
+#No esta bien optimizado
+for i in (1,2,3,4,5,6,7,8,9,10):
     print(i)
 
-print()
-
-newlista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(Fore.YELLOW +'\nFOR N°2')
+newlista = [1,2,3,4,5,6,7,8,9,10]
 for i in newlista:
     print(i)
 
-print()
-
-for i in range(11):
+print(Fore.YELLOW +'\nFOR N°3')
+for i in range(1,11):
     print(i)
 
-print()
 
-frutas = ["manzana", "banana", "cereza"]
+print(Fore.GREEN + "\n03 - ITERADOR E ITERABLES")
+#Aprendiendo los conceptos de iterador e iterable
+iterador = iter(newlista)
 
-for fruta in frutas:
-    print("Me gusta", fruta)
-
-print("Fin del bucle for")
-
-# En este ejemplo, tenemos una lista llamada frutas que contiene tres elementos: "manzana", "banana" y "cereza".
-# Utilizamos el bucle for para recorrer cada elemento de la lista frutas.
-# En cada iteración, la variable fruta toma el valor del elemento actual de la lista.
-# Dentro del bucle, imprimimos la frase "Me gusta" seguida de la fruta actual utilizando la función print().
-# El bucle for se ejecutará automáticamente para cada elemento de la lista frutas.
-# Una vez que se hayan procesado todos los elementos de la lista, el bucle for finalizará y se imprimirá "Fin del bucle for".
-
-print()
-# Bucle For (Definida)
-frutas = ["manzana", "banana", "cereza"]
-
-for fruta in frutas:
-    print("Me gusta", fruta)
-
-print()
-# Bucle While (No definida)
-contador = 0
-
-while contador < 5:
-    print("El contador es:", contador)
-    contador += 1
-
-# Bucle do-while (simulado con un bucle while y una condición de salida)
-respuesta = "si"
-
-while respuesta == "si":
-    print("Haciendo algo...")
-    respuesta = input("¿Desea continuar? (si/no): ")
-
-print("Fin del programa")
+print(next(iterador))  #Imprime 1
+print(next(iterador))  #Imprime 2
+print(next(iterador))  #Imprime 3
+print(next(iterador))  #Imprime 4
+print(next(iterador))  #Impreme 5 ... 
