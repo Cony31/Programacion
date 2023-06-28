@@ -1,11 +1,11 @@
-# Estructura de datos 26/04
-
+#Estructura de datos 26/04
 # {} = llaves
 # [] = corchetes
 # () = parentecis
 # / = division
 # = exponente
 
+#01-DATOS DE TIPO NÚMERICO
 edad = 29
 estatura = 1.71
 peso = 70.5
@@ -15,17 +15,18 @@ print("01. datos numericos")
 print(f"mi estatura es de {estatura} y el peso es de {peso}")
 print("impresion de un numero complejo:", complejo, "\n")
 
-# TRANSFORMACION DE ENTERO A REAL
+#Transformacion de entero a real
 print(peso)
 print("transformando un valor real a entero:", int(peso))
 
-# OPERACIONES ARITMETICAS BASICAS
+#Operaciones aritmeticas basicas
 imc = peso / (estatura * 2)
 print("Mi IMC es de:", imc, "\n")
 
 print(
     "Mi IMC es de: {:.2f}".format(imc), "\n"
-)  # FORMATEANDO EL VALOR DE SALE 2 DECIMALES
+)
+
 
 # 02- DATOS DE TIPO CADENA DE CARACTERES
 asignatura = "programacion"
@@ -37,6 +38,7 @@ print("La asignatura de", asignatura, "corresponde a la carrera de", carrera)
 print("la cantidad de caracteres de la palabra", asignatura, "es de:", len(asignatura))
 print("la cantidad de caracteres de la palabra", carrera, "es de:", len(carrera))
 
+
 # 03-VALORES DE VERDADERO Y FALSO
 ampolleta = False
 interruptor = True
@@ -45,39 +47,35 @@ print("##### 03-BOOLEANS #####")
 print(ampolleta, interruptor)
 print(
     "La variable ampolleta es de tipo:", type(interruptor), "\n"
-)  # type reconoce el tipo de dato que se esta trabajando
+)#type reconoce el tipo de dato que se esta trabajando
 
-# podemos transformar cualquier valor a un booleano al igual que un string, int, etc
-# booleano es un tipo de dato
+#Podemos transformar cualquier valor a un booleano al igual que un string, int, etc
+#Booleano es un tipo de dato
 print(bool(0))
 print(bool(""))
-print(bool(None))
+print(bool(false))
 print(bool("true"))
 print(bool(1))
 print("\n")
+
+
 # 04-DATOS DE TIPO LIST (objetos de tipo colección) - (mutable)
 print("##### 04 - LISTA #####")
 
-# inicializando lista de 2 maneras
+#Inicializando lista de 2 maneras
 nueva_lista = list()
 otra_lista = []
 print("esta es una lista vacia:", nueva_lista)
 print("esta es otra lista vacia:", otra_lista)
 print(type(otra_lista))
 
-# declarando tres listas diferentes
+#Declarando tres listas diferentes
 estudiantes = ["Matias", "Marco", "Cristobal", "Sebastian", "Marco"]
 num = [1, 2, 3, 4, 5, 6]
-lenguaje = ["python"]
-
+lenguaje = list(["Python","Dart"])
 mixta = ["Juan", 18, "Pepe", 14]
 
-print(estudiantes)
-print(num)
-print(lenguaje)
-print(mixta)
-
-# se puede realizar una lista de datos cumpuestos
+#Se puede realizar una lista de datos cumpuestos
 data = ["osorno", {"UV": "nivel bajo", "Temp *C": 15}, {-40.5725, -72.1353}]
 listamixta = ["Felipe", 100, True]
 
@@ -99,26 +97,35 @@ print(estudiantes[1])  # (2° elemento de la lista)
 # print(estudiantes[5]) #incorrecto
 print("posicion -2", estudiantes[-2])
 
-# ¿se pueden sumar listas?
+#Reasignando el valor de la 3° posicion de la lista
+estudiantes[3] = "Gabriela"
+print("El nuevo arreglo de estudiantes es:",estudiantes)
+
+#Inicializando otra lista de datos mixtos
+data_asig = [10023,"Programación",1,True]
+
+#¿Que hace este código?    #Desempaquetando elementos de la lista (data_asig) a variables
+cod,ramo,semestre,estado = data_asig
+print(ramo)
+
+#¿Se pueden sumar listas?
 print("suma de listas", estudiantes + num)
 
-# ¿que hacen estas funciones?
+#¿Que hacen estas funciones?
 print(list("python"))
 print(list(range(1, 5)))
 print("\n")
 
-# en el fichero de listas mostrara mas funciones
-
-# Tuplas (no mutables)
+#Tuplas (no mutables)
 newtupla = tuple()
 grupo1 = ("daniel", "cristian", "felipe", "200", "100", "daniel")
 print("#### 05-tuplas ####")
 print(tuple(grupo1))
 
-# Accediendo al primer elemento de la tupla
+#Accediendo al primer elemento de la tupla
 print(grupo1(0))
 
-# Consultando el elemento "daniel" cuantas veces se encuentra en el tupla
+#consultando el elemento "daniel" cuantas veces se encuentra en el tupla
 print("El elemento que se repite:", grupo1.count("daniel"))
 
 # Muestra el indice del primer elemento buscando
@@ -135,7 +142,7 @@ grupo1[0] = "Constanza"
 print(grupo1)
 
 # ¿Se puede sumas las tuplas?
-
+print("Suma de listas:",estudiantes + num)
 
 # Obteniendo un trozo de la tupla
 grupo2 = ("Pedro", "100", "Felipe", "Diego", "2020", "Alejandra")
@@ -159,4 +166,54 @@ print(Conjunto_Animales[0])  # Accediendo al primer elemento
 conjunto_colores.add("celeste")
 print("El set de colores lo conforman:", conjunto_colores)
 
-Conjunto_Animales.add("Gato")
+#Conjunto_animales.add("Gato")
+print("El set de animales lo conforman:",conjunto_animales,"\n") #un set no acepta duplicados, a diferencia de las listas que si.
+
+
+#07 - DICCIONARIOS (Clave-Valor)
+print("06-DICCIONARIOS")
+
+diccionario1 = dict()
+diccionario2 = {}
+
+datos_personales = {
+    "Nombre":"Victor",
+    "Institucion":"Ulagos",
+    "Edad":29
+    }
+
+print(datos_personales)
+
+datos_personales = {
+    "Nombre":"Victor",
+    "Institucion":"Ulagos",
+    "Edad": 29,
+    "Asignaturas": {"Estructura de Datos", "Programación"}
+    }
+
+print("Diccionario inicial:",datos_personales)
+
+#Consulta la cantidad de elementos del Diccionario
+print(len(datos_personales))
+
+#Es facilmente accesible a los elementos dentro de un diccionario
+print(datos_personales["Institucion"])
+
+#¿Como actualizamos el valor de una clave dentro de un diccionario?
+datos_personales["Institucion"] = "USS" 
+print("Diccionario actualizado:",datos_personales)
+
+#Agregando un nuevo clave al diccionario
+datos_personales["Ciudad"] = "Osorno"
+print(datos_personales)
+print("Diccionario con el nuevo campo:",datos_personales)
+
+#Eliminando un campo del diccionario
+del datos_personales["Ciudad"]
+print("Diccionario con el campo eliminado:",datos_personales)
+
+hospital = dict(
+    nombre = "Hospital San Jose",
+    direccion = "Dr. Guillermo Buhler 1765",
+    ciudad = "Osorno"
+)
